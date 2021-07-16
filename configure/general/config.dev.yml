@@ -1,0 +1,15 @@
+mssql:
+  enableConnect: true #true
+  databaseType: "mssql"
+  server: "34.87.44.23"
+  port: 1433
+  username: "bootcamp"
+  password: "P@ssw0rd"
+  database:
+    master: "bootcamp"
+
+scheduler:
+  enableJob: false #true
+
+expirationTime:
+  expHour: 1

@@ -1,0 +1,649 @@
+general:
+  code: "general_error"
+  th: "ระบบไม่สามารถดำเนินการได้ กรุณาทำรายการอีกครั้งในภายหลัง"
+  en: "System cannot process this request at the moment. Please try again later."
+
+bad_request:
+  status: "400"
+  code: "50400"
+  th: "ข้อมูล JSON Body ใน Request ไม่ถูกต้อง"
+  en: "Invalid JSON."
+
+no_content:
+  status: "204"
+  code: "50402"
+  th: ""
+  en: "No Content"
+
+not_found:
+  status: "404"
+  code: "50404"
+  th: ""
+  en: "Page Not Found"
+
+# 400
+auth:
+  invalid_credential:
+    code: "40101"
+    th: "ข้อมูลการยืนยันตัวตนไม่สมบูรณ์"
+    en: "The credential info for authentication are invalid."
+  invalid_refresh_token:
+    code: "40102"
+    th: "รีเฟรชโทเคนไม่ถูกต้อง"
+    en: "The refresh token are invalid."
+  invalid_client_id:
+    code: "40103"
+    th: "รหัสการขอใช้งานไม่ถูกต้อง"
+    en: "Invalid client ID."
+  invalid_client_secret:
+    code: "40104"
+    th: "รหัสยืนยันตัวตนผู้ใช้งานไม่ถูกต้อง"
+    en: "Invalid client secret."
+  #  invalid_client_type:
+  #    code: "40105"
+  #    th: "ประเภทผู้ใช้งานไม่ถูกต้อง"
+  #    en: "Invalid client type."
+  permission_not_found:
+    code: "40106"
+    th: "ไม่พบสิทธิ์การขอเข้าใช้งาน"
+    en: "Permission not found."
+  invalid_token:
+    code: "40107"
+    th: "ข้อมูลยืนยันตัวตนไม่ถูกต้อง"
+    en: "Invalid token."
+  login_not_found:
+    code: "40108"
+    th: "ไม่พบรหัสผู้ใช้งาน"
+    en: "Login not found."
+  session_not_found:
+    code: "40109"
+    th: "ไม่พบข้อมูลการเข้าใช้งานระบบ"
+    en: "Session not found."
+  invalid_reset_password:
+    code: "40109"
+    th: "ข้อมูลรีเซ็ตรหัสผ่านไม่ถูกต้อง"
+    en: "Invalid request to reset password."
+  invalid_new_password:
+    code: "40110"
+    th: "ข้อมูลรหัสผ่านไม่ถูกต้อง"
+    en: "Invalid password."
+  role_not_found:
+    code: "40111"
+    th: "ไม่พบประเภทผู้ใช้งาน"
+    en: "Role not found."
+  invalid_otp:
+    code: "40112"
+    th: "OTP ไม่ถูกต้อง"
+    en: "Invalid OTP."
+  comp_integration_not_found:
+    code: "40113"
+    th: "ไม่พบข้อมูลช่องทางการขอเข้าใช้งานระบบ"
+    en: "Company integration not found."
+  password_is_duplicate:
+    code: "40114"
+    th: "รหัสผ่านนี้เคยถูกใช้ไปแล้ว"
+    en: "password is duplicate"
+  invalid_confirm_password:
+    code: "40110"
+    th: "ยืนยันรหัสผ่านไม่ถูกต้อง"
+    en: "Invalid confirm password."
+  invalid_accept_privacy_notice:
+    code: "40111"
+    th: "ยืนยัน privacy notice ไม่ถูกต้อง"
+    en: "Invalid accept privacy notice."
+  get_privacy_notice_bad_request:
+    code: "40112"
+    th: "คำขอ privacy notice ไม่ถูกต้อง"
+    en: "Get privacy notice bad request."
+  authorization_not_found:
+    code: "40113"
+    th: "ไม่พบ authorization"
+    en: "Not found authorization"
+  authorization_expiration:
+    code: "40114"
+    th: "Token หมดอายุ"
+    en: "Authorization expiration"
+  access_denied:
+    code: "40301"
+    th: "ไม่มีสิทธิ์เข้าใช้งาน"
+    en: "Access denied."
+  invalid_username_password:
+    code: "40302"
+    th: "รหัสบัญชีผู้ใช้งานไม่ถูกต้อง"
+    en: "The username and/or password used for authentication are invalid."
+  token_expired:
+    code: "40303"
+    th: "ข้อมูลยืนยันตัวตนหมดอายุ"
+    en: "Token expired"
+  token_used_before_assign:
+    code: "40304"
+    th: "ข้อมูลยืนยันตัวตนถูกใช้งานก่อนกำหนด"
+    en: "Token user before assignation."
+  token_parse_fail:
+    code: "40305"
+    th: "การแปลงข้อมูลยืนยันตัวตนผิดพลาด"
+    en: "Parsing token fail."
+  invalid_client_type:
+    code: "40306"
+    th: "ประเภทผู้ใช้งานไม่ถูกต้อง"
+    en: "Invalid client type."
+  inactive_login:
+    code: "40307"
+    th: "รหัสผู้ใช้งานไม่พร้อมใช้งาน"
+    en: "Inactive username"
+  inactive_comp:
+    code: "40308"
+    th: "รหัสผู้ใช้อยู่ภายใต้บริษัทที่ไม่พร้อมใช้งาน"
+    en: "Inactive company"
+  invalid_username_email:
+    code: "40309"
+    th: "รหัสบัญชีผู้ใช้งานไม่ถูกต้อง"
+    en: "The username and/or email are invalid."
+  get_privacy_notice_unauthorized:
+    code: "40310"
+    th: "ไม่สามารถเข้าใช้งานได้"
+    en: "Access denied."
+  get_privacy_notice_not_found:
+    code: "40311"
+    th: "ไม่พบ privacy notice"
+    en: "Privacy notice not found."
+  get_login_fail:
+    code: "40501"
+    th: "เกิดข้อผิดพลาดขณะค้นหาบัญชีใช้งาน"
+    en: "An unexpected error occurred on get login account."
+  decode_hash_password_fail:
+    code: "40502"
+    th: "เกิดข้อผิดพลาดขณะตรวจสอบรหัสผ่าน"
+    en: "An unexpected error occurred on hash decode."
+  create_access_token_fail:
+    code: "40503"
+    th: "เกิดข้อผิดพลาดขณะสร้างโทเคน"
+    en: "An unexpected error occurred on create access token."
+  signing_access_token_fail:
+    code: "40503"
+    th: "เกิดข้อผิดพลาดขณะสร้างลายเซ็นโทเคน"
+    en: "An unexpected error occurred on access token signing."
+  create_refresh_token_fail:
+    code: "40504"
+    th: "เกิดข้อผิดพลาดขณะสร้างรีเฟรชโทเคน"
+    en: "An unexpected error occurred on create refresh token."
+  signing_refresh_token_fail:
+    code: "40504"
+    th: "เกิดข้อผิดพลาดขณะสร้างลายเซ็นรีเฟรชโทเคน"
+    en: "An unexpected error occurred on refresh token signing."
+  add_new_session_fail:
+    code: "40505"
+    th: "เกิดข้อผิดพลาดขณะจัดเก็บข้อมูลเซสชั่น"
+    en: "An unexpected error occurred on storing session to database."
+  refreshing_session_fail:
+    code: "40506"
+    th: "เกิดข้อผิดพลาดขณะต่ออายุเซสชั่น"
+    en: "An unexpected error occurred on refresh session."
+  revoke_session_fail:
+    code: "40507"
+    th: "เกิดข้อผิดพลาดขณะยกเลิกสิทธิ์เซ็ตชั่น"
+    en: "An unexpected error occurred on revoke session."
+  get_session_fail:
+    code: "40508"
+    th: "เกิดข้อผิดพลาดขณะค้นหาเซตชั่น"
+    en: "An unexpected error occurred on get session."
+  get_client_id_fail:
+    code: "40509"
+    th: "เกิดข้อผิดพลาดขณะค้นหารหัสขอเข้าใช้งาน"
+    en: "An unexpected error occurred on get client ID."
+  get_client_secret_fail:
+    code: "40510"
+    th: "เกิดข้อผิดพลาดขณะค้นหารหัสผู้ใช้งาน"
+    en: "An unexpected error occurred on get client secret."
+  get_salt_fail:
+    code: "40511"
+    th: "An unexpected error occurred on get salt."
+    en: "An unexpected error occurred on get salt."
+  convert_tick_fail:
+    code: "40512"
+    th: "An unexpected error occurred on convert tick to time."
+    en: "An unexpected error occurred on convert tick to time."
+  get_private_key_fail:
+    code: "40513"
+    th: "เกิดข้อผิดพลาดขณะอ่าน Private key"
+    en: "An unexpected error occurred on get private key."
+  get_public_key_fail:
+    code: "40514"
+    th: "เกิดข้อผิดพลาดขณะอ่าน Public key"
+    en: "An unexpected error occurred on get public key."
+  parse_private_key_fail:
+    code: "40515"
+    th: "เกิดข้อผิดพลาดขณะเรียกใช้ Private key"
+    en: "An unexpected error occurred on parse private key."
+  parse_public_key_fail:
+    code: "40516"
+    th: "เกิดข้อผิดพลาดขณะเรียกใช้ Public key"
+    en: "An unexpected error occurred on parse Public key."
+  initial_claim_fail:
+    code: "40517"
+    th: "เกิดข้อผิดพลาดขณะสร้างข้อมูลผู้ใช้งาน"
+    en: "An unexpected error occurred on initial claim."
+  signed_string_fail:
+    code: "40518"
+    th: "เกิดข้อผิดพลาดขณะสร้างลายเซ็นผู้ใช้งาน"
+    en: "An unexpected error occurred on signing token string."
+  hashing_fail:
+    code: "40519"
+    th: "เกิดข้อผิดพลาดขณะสร้าง Hash"
+    en: "An unexpected error occurred on hashing."
+  initial_token_fail:
+    code: "40520"
+    th: "เกิดข้อผิดพลาดขณะสร้างข้อมูลผู้ใช้งาน"
+    en: "An unexpected error occurred on create token."
+  get_claims_fail:
+    code: "40521"
+    th: "ไม่สามารถระบุตัวตนผู้เข้าใช้งาน"
+    en: "Couldn't find user claim."
+  update_otp_fail:
+    code: "40522"
+    th: "เกิดข้อผิดพลาดขณะสร้าง OTP"
+    en: "An unexpected error occurred on create OTP."
+  get_role_fail:
+    code: "40522"
+    th: "ไม่สามารถระบุประเภทผู้เข้าใช้งาน"
+    en: "Couldn't find user role."
+  get_company_type_fail:
+    code: "40523"
+    th: "เกิดข้อผิดพลาดขณะค้นหาประเภทบริษัท"
+    en: "An unexpected error occurred on get company type."
+  get_company_fail:
+    code: "40524"
+    th: "เกิดข้อผิดพลาดขณะส้นหาข้อมูลบริษัท"
+    en: "An unexpected error occurred on get company info."
+  decode_hash_otp_fail:
+    code: "40525"
+    th: "เกิดข้อผิดพลาดขณะตรวจสอบรหัสผ่าน"
+    en: "An unexpected error occurred on hash decode."
+  update_login_history_fail:
+    code: "40526"
+    th: "เกิดข้อผิดพลาดขณะจัดเก็บข้อมูลการเข้าใช้ระบบ"
+    en: "An unexpected error occurred on update login history."
+  get_comp_integration_fail:
+    code: "40528"
+    th: "เกิดข้อผิดพลาดขณะค้นหาข้อมูลช่องทางการใช้งานระบบ"
+    en: "An unexpected error occurred on get company integration info."
+  get_privacy_notice_fail:
+    code: "40529"
+    th: "เกิดข้อผิดพลาดขณะค้นหาข้อมูล privacy notice"
+    en: "An unexpected error occurred on get privacy notice."
+  parse_privacy_notice_fail:
+    code: "40530"
+    th: "เกิดข้อผิดพลาดขณะเรียกใช้ privacy notice"
+    en: "An unexpected error occurred on parse privacy notice."
+  accept_privacy_notice_fail:
+    code: "40531"
+    th: "เกิดข้อผิดพลาดขณะยอมรับ privacy notice"
+    en: "An unexpected error occurred on accept privacy notice."
+  connecting_ldap_fail:
+    code: "40532"
+    th: "เกิดข้อผิดพลาดขณะเชื่อมต่อ"
+    en: "An unexpected error occurred on connect ldap."
+  binding_ldap_fail:
+    code: "40533"
+    th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+    en: "An unexpected error occurred on bind ldap."
+  Status_internal_server_error:
+    code: "40534"
+    th: "เกิดข้อผิดพลาดทางเซิฟเวอร์"
+    en: "Status_internal_server_error:"
+
+
+# 500
+character:
+  get_item_error:
+    code: "50001"
+    th: ""
+    en: "no item belong to this id."
+  get_item_not_found:
+    code: "50002"
+    th: ""
+    en: "no item belong to this id."
+  get_character_not_found:
+    code: "50003"
+    th: ""
+    en: "no character belong to this id."
+  not_enough_balance:
+    code: "50004"
+    th: ""
+    en: "do not have enough balance to buy."
+  character_id_not_found:
+    code: "50005"
+    th: "ไม่พบ character id"
+    en: "character id not found, please input correct id"
+  get_character_info_not_found:
+    code: "50006"
+    th: ""
+    en: "GetCharacterInfo fail :record not found"
+  get_buff_info_not_found:
+    code: "50007"
+    th: ""
+    en: "GetBuffNotFound fail :record not found"
+  get_item_list_not_found:
+    code: "50008"
+    th: ""
+    en: "itemlist fail :record not found"
+
+# 600
+farm:
+  get_farm_not_found:
+    code: "60001"
+    th: ""
+    en: "Get farm info fail : record not found"
+  get_plant_dex_not_found:
+    code: "60002"
+    th: ""
+    en: "Get plant dex info fail : record not found"
+  get_item_not_found:
+    code: "60003"
+    th: ""
+    en: "Get item fail : record not found"
+  update_item_pool_fail:
+    code: "60004"
+    th: ""
+    en: "Update item pool fail"
+  update_grow_up_fail:
+    code: "60005"
+    th: ""
+    en: "Update result grow up fail"
+  get_inv_inventory_not_found:
+    code: "60006"
+    th: ""
+    en: "Get inventory info fail : record not found"
+  update_farm_fail:
+    code: "60007"
+    th: ""
+    en: "Update farm fail"
+  update_inventory_fail:
+    code: "60008"
+    th: ""
+    en: "Update inventory fail"
+  add_new_item_fail:
+    code: "60009"
+    th: ""
+    en: "New item inventory fail"
+  harvest_fail_invalid_state:
+    code: "60010"
+    th: ""
+    en: "Harvest fail : plant state is invalid"
+  harvest_fail_invalid_harvest_remaining:
+    code: "60011"
+    th: ""
+    en: "Harvest fail : record not found"
+  check_remaining_not_found:
+    code: "60012"
+    th: ""
+    en: "checkRemaining fail : record not found"
+  check_remaining_have_plant:
+    code: "60013"
+    th: ""
+    en: "Planting fail : Cannot Planting Already Plant in space"
+  check_inventory_not_found:
+    code: "60014"
+    th: ""
+    en: "check inventory fail : record not found"
+  check_inventtory_have_no_seed:
+    code: "60015"
+    th: ""
+    en: "Planting fail :Have No Seed"
+  check_seed_not_found:
+    code: "60016"
+    th: ""
+    en: "CheckSeedFail fail : record not found"
+  check_seed_only_seed_plant:
+    code: "60017"
+    th: ""
+    en: "Planting fail :  only seed can planting"
+  get_plant_dex_by_item_id_not_found:
+    code: "60018"
+    th: ""
+    en: "getPlantDexByItemId fail :record not found"
+  delete_inventory_fail:
+    code: "60019"
+    th: ""
+    en: "delete InventTory fail "
+  update_quantity_fail:
+    code: "60020"
+    th: ""
+    en: "update Quantity fail"
+  harvest_horny_fail_invalid_state:
+    code: "60021"
+    th: ""
+    en: "Harvest horny fruit fail : is limit per day"
+# 601
+  validate_fail:
+    check_farm:
+      code: "60101"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป "
+      en: "Invalid farm coordinates."
+    check_plant:
+      code: "60102"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป "
+      en: "Plant not found on the farm."
+    check_watered:
+      code: "60103"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป "
+      en: "This plant has been watered."
+  # 602
+  update_fail:
+    update_watered:
+      code: "60201"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป "
+      en: "Cannot update watering"
+      
+# 700
+market:
+  quantity_bad_request:
+    code: "70001"
+    th: ""
+    en: "quantity must be integer greater than 0."
+  market_id_bad_request:
+    code: "70002"
+    th: ""
+    en: "cannot buy item from this market."
+  get_item_error:
+    code: "70003"
+    th: ""
+    en: "error while get item in database."
+  get_item_not_found:
+    code: "70004"
+    th: ""
+    en: "no item belong to this id."
+  get_character_error:
+    code: "70005"
+    th: ""
+    en: "error while get character in database."
+  get_character_not_found:
+    code: "70006"
+    th: ""
+    en: "no character belong to this id."
+  lottery_number_bad_request:
+    code: "70007"
+    th: ""
+    en: "please enter lottery_number."
+  get_lottery_error:
+    code: "70008"
+    th: ""
+    en: "error while get lottery in database."
+  lottery_is_bought:
+    code: "70009"
+    th: ""
+    en: "this lottery number is bought already."
+  not_enough_balance:
+    code: "70010"
+    th: ""
+    en: "do not have enough balance to buy."
+  update_balance_error:
+    code: "70011"
+    th: ""
+    en: "error while update balance in database."
+  update_lottery_pool_error:
+    code: "70012"
+    th: ""
+    en: "error while update lottery pool in database."
+  insert_inventory_error:
+    code: "70013"
+    th: ""
+    en: "error while insert item in inventory in database."
+  update_inventory_error:
+    code: "70014"
+    th: ""
+    en: "error while update item in inventory in database."
+  commit_error:
+    code: "70015"
+    th: ""
+    en: "error while commit transaction."
+
+  # 701
+  validate_fail:
+    validate_quantity_fail:
+      code: "70101"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "The quantity of products to be sold is incorrect."
+    item_type_cant_sell:
+      code: "70102"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "This item type cannot be sold."
+    item_quantity_cant_sell:
+      code: "70103"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "This item quantity cannot be sold."
+    refresh_mandragora_buff_fail:
+      code: "70104"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Mandragora buff cannot be refreshed."
+    check_buff_fail:
+      code: "70105"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Buff check failed."
+  # 702
+  update_fail:
+    item_quantity_cant_update:
+      code: "70201"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "This item quantity cannot be update."
+    item_gold_cant_update_c1:
+      code: "70202"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Can't update the currency, gold."
+    item_gold_cant_update_c2:
+      code: "70203"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Can't update the currency, gold."
+    item_gold_cant_update_normal:
+      code: "70204"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Can't update the currency, gold."
+    buff_cant_updateC1:
+      code: "70205"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Can't update mandragora buff."
+    buff_cant_updateC2:
+      code: "70206"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Can't update mandragora buff."
+    buff_cant_update_refresh:
+      code: "70207"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Can't update mandragora buff."
+  # 703
+  insert_fail:
+    insert_character_fail:
+      code: "70301"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Can't insert character."
+    insert_buff_fail:
+      code: "70302"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Can't insert mandragora buff."
+    # 704
+  delete_fail:
+    delete_inventory_fail:
+      code: "70401"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Can't delete inventory."
+    delete_buff_fail:
+      code: "70402"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป ldap"
+      en: "Can't delete buff."
+# 800
+register:
+  # 801
+  validate_fail:
+    validate_username_empty:
+      code: "80101"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Username is empty."
+    validate_username_length:
+      code: "80102"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Username should be no longer than 15 characters."
+    validate_password_length:
+      code: "80103"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Password should be no longer than 20 characters."
+    validate_email_length:
+      code: "80104"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Email should be no longer than 30 characters."
+    password_not_match:
+      code: "80105"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Cannot create account. Passwords do not match."
+    duplicate_email:
+      code: "80106"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Cannot create account. Email already exist."
+    duplicate_username:
+      code: "80107"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Cannot create account. Username already exist."
+  # 802
+  create_fail:
+    create_username:
+      code: "80201"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Create username failed. Please try again."
+    create_character:
+      code: "80202"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Create character failed. Please try again."
+    create_inventory:
+      code: "80203"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Create inventory failed. Please try again."
+    create_farm:
+      code: "80204"
+      th: "เกิดข้อผิดพลาดขณะส่งข้อมูลไป"
+      en: "Create farm failed. Please try again."
+
+  # 1000
+  lottery:
+    get_lottery_error:
+      code: "100002"
+      th: "ไม่พบรายการล็อตเตอรี่"
+      en: "Get lottery list error."
+    #1001
+    get_gamu_owner_error:
+      code: "100101"
+      th: "ไม่พบรายการผู้ครอบครองผลกามู"
+      en: "Get gamu owner detail error."
+    get_lottery_count_error:
+      code: "100102"
+      th: "ไม่พบจำนวนล็อตเตอรี่"
+      en: "not found amout of lottery."
+    get_random_lottery_error:
+      code: "100103"
+      th: "ไม่สามารถสุ่มล็อตเตอรี่ได้"
+      en: "random lottery error."
+    #1002
+    update_lottery_owner_error:
+      code: "100201"
+      th: "อัพเดทเจ้าของล็อตเตอรี่ไม่สำเร็จ"
+      en: "update lottery owner error."
+
+

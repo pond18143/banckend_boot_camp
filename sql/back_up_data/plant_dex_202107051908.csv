@@ -1,0 +1,26 @@
+"id","item_id","state_id","state_name","hour_to_grow","plant_description","plant_name","plant_type","is_special_item","update_date","harvest"
+1,1,1,seed,0,ผลไม้ในตำนานที่ว่ากันว่าทานเข้าไปแล้วจะ.......,gamu gamu seed,1,0,,1
+2,0,2,sprout,2,ต้นอ่อนของผลไม้ในตำนานถ้ารอให้โตอีกนิดละก็....,gamu gamu sprout,1,0,,1
+3,8,3,ripened,2,เก็บไว้ให้ดีๆล่ะ,gamu gamu fruit,1,0,,1
+4,2,1,seed,0,S T O N K,forest silk seed,2,0,,1
+5,9,2,ripened,1,หลายคนเปรียบมันดั่งลูกนกที่ยังไม่พร้อมออกจากรัง,forest silk 1,2,0,,1
+6,10,3,ripened,1,ใจเย็นๆอีกซักนิด....,forest silk 2,2,0,,1
+7,11,4,ripened,1,รวย!!!,forest silk 3,2,0,,1
+8,3,1,seed,0,no horny BONK BONK BONK,horny seed,3,0,,3
+9,28,2,ripened,1,We said NO HORNY!!!,horny fruit,3,0,,3
+10,4,1,seed,0,ผลไม้หน้าตาประหลาด ที่จะเปล่งประกายในค่ำคืนที่มืดมิด,jack o'lantern RGB seed,4,0,,1
+11,0,2,sprout,1,ผลไม้ที่มีแสงจ้าาาาาาาาาาาาาาาาาาาาาาา,jack o'lantern RGB sprout,4,0,,1
+12,12,3,ripened,1,Zzz,jack o'lantern RGB fruit,4,0,,1
+13,18,3,ripened,1,RGB mode activate,golden jack o'lantern RGB,4,1,,1
+14,5,1,seed,0,ผลไม้ลึกลับที่จะส่งเสียงร้องน่ารำคาญเวลาถูกรบกวนเวลานอน,mandragora seed,5,0,,1
+15,0,2,sprout,1,เสียงของต้นอ่อนที่ดังและน่ารำคาญอย่าเผลอไปปลุกละ,mandragora sprout,5,0,,1
+16,19,3,ripened,1,มีสรรพคุณมากมาย พ่อค้ามักรับซื้อคู่กับผลไม้ชนิดอืนๆเพอนำไปใชผสมทำยาตอไป,mandragora fruit,5,0,,1
+17,6,1,seed,0,ผลไม้หลากสีแห่งเมือง ComSci ที่มีรสชาติที่หลากหลายซุกซ่อนอยู่,apricot seed,6,0,,1
+18,20,2,white,1,เค็ม!!! ผลไม้ลูกนี้นี่มันเค็มจริงๆ,apricot white fruit,6,1,,1
+19,21,2,blue,1,รสชาติค่อนข้างบาดปาก จึงไม่ค่อยเป็นที่นิยม,apricot blue fruit,6,1,,1
+20,22,2,green,1,ว่ากันว่าเวลาจะกินอย่าให้โดนโคนลิ้น,apricot green fruit,6,1,,1
+21,23,2,red,1,เวลาจะกินอย่าลืมเตรียมน้ำเย็นๆไว้เยอะๆล่ะ,apricot red fruit,6,1,,1
+22,24,2,orange,1,มีรสซาบซ่าน ช่วยให้รู้สึกหายง่วงได้,apricot orange fruit,6,1,,1
+23,25,2,pink,1,รสชาติหอมหวานของมันเกินที่ใครๆจะต้านทานไหว,apricot pink fruit,6,1,,1
+24,26,2,black,1,จุดบรรจบของรสชาติที่ลงตัวที่ใครๆก็อยากลิ้มลอง,apricot black fruit,6,1,,1
+25,27,2,rainbow,1,ผลไม้หายากที่มีโอกาสเกิดเพิ่งแค่ 10 ลูกต่อปี ว่ากันว่ารสชาติของมันสุดลึกล้ำเหนือคำบรรยาย,apricot rainbow fruit,6,1,,1

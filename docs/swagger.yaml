@@ -1,0 +1,909 @@
+swagger: "2.0"
+info:
+  description: "This is project"
+  version: "1.0.0"
+  title: "Project"
+host: "localhost:8080"
+tags:
+- name: "Dashboard"
+  description: ""
+- name: "Documents"
+  description: ""
+- name: "Onboard"
+  description: ""
+paths:
+  /dashboard/{type}/sumDocumentHeader :
+    post:
+      tags:
+      - "Dashboard"
+      summary: "Dashboard for Seller or Buyer"
+      description: ""
+      operationId: "dashID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "type"
+        in: "path"
+        description: "Enter document type (PO/GR/INV)"
+        required: true
+        type: "string"
+      - name: "Restore"
+        in: "query"
+        description: "Restore the asset"
+        required: false
+        type: boolean
+      - name: "RequestBody"
+        in: "body"
+        description: "Input your infomation to access data"
+        required: false
+        schema:
+          $ref: "#/definitions/reqDashboard"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/resDashboard200"
+        "400": 
+          description: "Bad Request"
+        "404":
+          description: "Not Found"
+  /documents/{type}/draft:
+    post:
+      tags:
+      - "Documents"
+      summary: "create document"
+      description: ""
+      operationId: "draftID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "type"
+        in: "path"
+        description: "Enter document type (PO/GR/INV)"
+        type: "string"
+        required: true
+      - name: "Restore"
+        in: "query"
+        description: "Restore the asset"
+        required: false
+        type: boolean
+      - name: "body"
+        in: "body"
+        required: false
+        description: "Enter data to  create"
+        schema:
+          $ref: "#/definitions/reqDocHeader"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/createOK"
+        "400": 
+          description: "Bad Request"
+          schema:
+            $ref: "#/definitions/createInvalid"
+        "404":
+          description: "Not Found"
+          schema:
+            $ref: "#/definitions/createNotFound"
+  /documents/{type}/cancel:
+    post:
+      tags:
+      - "Documents"
+      summary: "cancel document"
+      description: ""
+      operationId: "cancelID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "type"
+        in: "path"
+        description: "Enter document type (PO/GR/INV)"
+        required: true
+        type: "string"
+      - name: "Restore"
+        in: "query"
+        description: "Restore the asset"
+        required: false
+        type: boolean
+      - in: "body"
+        name: "body"
+        description: "Enter infomation to cancel document"
+        required: false
+        schema:
+          $ref: "#/definitions/documentReq"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/cancelSuccess"
+        "400": 
+          description: "Bad Request"
+          schema:
+            $ref: "#/definitions/cancelInvalid"
+        "404":
+          description: "Not Found"
+          schema:
+            $ref: "#/definitions/cancelNotFound"
+  /documents/{type}/reject:
+    post:
+      tags:
+      - "Documents"
+      summary: "reject document"
+      description: ""
+      operationId: "rejectID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "type"
+        in: "path"
+        description: "Enter document type (PO/GR/INV)"
+        required: true
+        type: "string"
+      - name: "Restore"
+        in: "query"
+        description: "Restore the asset"
+        required: false
+        type: boolean
+      - in: "body"
+        name: "body"
+        description: "Enter infomation to reject document"
+        required: false
+        schema:
+          $ref: "#/definitions/documentReq"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/rejectSuccess"
+        "400": 
+          description: "Bad Request"
+          schema:
+            $ref: "#/definitions/rejectInvalid"
+        "404":
+          description: "Not Found"
+          schema:
+            $ref: "#/definitions/rejectNotFound"
+  /documents/{type}/submit:
+    post:
+      tags:
+      - "Documents"
+      summary: "submit document"
+      description: ""
+      operationId: "submitID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "type"
+        in: "path"
+        description: "Enter document type (PO/GR/INV)"
+        required: true
+        type: "string"
+      - name: "Restore"
+        in: "query"
+        description: "Restore the asset"
+        required: false
+        type: boolean
+      - in: "body"
+        name: "body"
+        description: "Enter infomation to submit document"
+        required: false
+        schema:
+          $ref: "#/definitions/documentReq"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/submitSuccess"
+        "400": 
+          description: "Bad Request"
+          schema:
+            $ref: "#/definitions/submitInvalid"
+        "404":
+          description: "Not Found"
+          schema:
+            $ref: "#/definitions/submitNotFound"
+  /documents/{type}/accept:
+    post:
+      tags:
+      - "Documents"
+      summary: "accept document"
+      description: ""
+      operationId: "acceptID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "type"
+        in: "path"
+        description: "Enter document type (PO/GR/INV)"
+        required: true
+        type: "string"
+      - name: "Restore"
+        in: "query"
+        description: "Restore the asset"
+        required: false
+        type: boolean
+      - in: "body"
+        name: "body"
+        description: "Enter infomation to accept document"
+        required: false
+        schema:
+          $ref: "#/definitions/documentReq"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/acceptSuccess"
+        "400": 
+          description: "Bad Request"
+          schema:
+            $ref: "#/definitions/acceptInvalid"
+        "404":
+          description: "Not Found"
+          schema:
+            $ref: "#/definitions/acceptNotFound"
+  /documents/{type}/edit:
+    post:
+      tags:
+      - "Documents"
+      summary: "edit draft document"
+      description: ""
+      operationId: "editDraftID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "type"
+        in: "path"
+        description: "Enter document type (PO/GR/INV)"
+        required: true
+        type: "string"
+      - name: "Restore"
+        in: "query"
+        description: "Restore the asset"
+        required: false
+        type: boolean
+      - in: "body"
+        name: "body"
+        description: "Enter infomation to edit document"
+        required: false
+        schema:
+          $ref: "#/definitions/reqDocHeader"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/editSuccess"
+        "400": 
+          description: "Bad Request"
+          schema:
+            $ref: "#/definitions/editInvalid"
+        "404":
+          description: "Not Found"
+          schema:
+            $ref: "#/definitions/editNotFound"
+  /documents/{type}/getDocumentDetail:
+    post:
+      tags:
+      - "Documents"
+      summary: "get document detail"
+      description: ""
+      operationId: "getID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "type"
+        in: "path"
+        description: "Enter document type (PO/GR/INV)"
+        required: true
+        type: "string"
+      - name: "Restore"
+        in: "query"
+        description: "Restore the asset"
+        required: false
+        type: boolean
+      - in: "body"
+        name: "body"
+        description: "Enter infomation to edit document"
+        required: false
+        schema:
+          $ref: "#/definitions/getDocID"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/getDocSuccess"
+        "400": 
+          description: "Bad Request"
+        "404":
+          description: "Not Found"
+  /documents/{type}/getDocumentList:
+    post:
+      tags:
+      - "Documents"
+      summary: "get document list"
+      description: ""
+      operationId: "ListID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "type"
+        in: "path"
+        description: "Enter document type (PO/GR/INV)"
+        required: true
+        type: "string"
+      - name: "Restore"
+        in: "query"
+        description: "Restore the asset"
+        required: false
+        type: boolean
+      - in: "body"
+        name: "body"
+        description: "Enter infomation to edit document"
+        required: false
+        schema:
+          $ref: "#/definitions/getDocID"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/getDocSuccess"
+        "400": 
+          description: "Bad Request"
+        "404":
+          description: "Not Found"
+  /onboard/{type}/Login:
+    get:
+      tags:
+      - "Onboard"
+      summary: "onboard"
+      description: ""
+      operationId: "OnboardID"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "type"
+        in: "path"
+        description: "Enter document status"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "Enter Company ID"
+        required: true
+        schema:
+          $ref: "#/definitions/reqOnboard"
+      responses:
+        "200":
+          description: "OK"
+        "400": 
+          description: "Bad Request"
+        "404":
+          description: "Not Found"
+          
+definitions:
+  reqDashboard:
+    type: "object"
+    properties:
+      company_id:
+        type: "integer"
+        example: 2
+      currency:
+        type: "string"
+        example: "THB"
+      filter_date_from:
+        type: "string"
+        example: "2020-01-12 00:00:00"
+      filter_date_to:
+        type: "string"
+        example: "2022-01-12 00:00:00"
+  reqDocHeader:
+    type: array
+    items:
+      type: object
+      properties:
+          document_number: 
+            type: integer
+          create_date:
+            type: string
+          expire_date:
+            type: string
+          buyer_company_id:
+            type: integer
+          seller_company_id:
+            type: integer
+          document_type: 
+            type: integer
+          document_status:
+            type: integer
+          record_status:
+            type: integer
+          note:
+            type: string
+          reason_cancel:
+            type: string
+          reason_reject:
+            type: string
+          update_by_id:
+            type: integer
+          count_edit_version:
+            type: integer
+          desciption:
+            type: string
+          net:
+            type: integer
+          vat_percent: 
+            type: integer
+          vat_value:
+            type: integer
+          discount:
+            type: integer
+          total_after_discount:
+            type: integer
+          grand_total: 
+            type: integer
+          currency:
+            type: string
+          delivery_address:
+            type: string
+          sequence: 
+            type: integer
+          sku:
+            type: integer
+          product_name:
+            type: string
+          quantity:
+            type: integer
+          unit:
+            type: integer
+          price_per_unit: 
+            type: integer
+          total_price:
+            type: integer
+    example:
+      - description: "Header"
+        document_number: PO001
+        create_date: "2020-01-11 00:00:00"
+        expire_date: "2022-01-11 00:00:00"
+        buyer_company_id: 1
+        seller_company_id: 2
+        document_type: 110
+        document_status: 1
+        recode_status: 1
+        net: 10000
+        vat_percent: 700
+        vat_value: 700
+        discount: 100
+        total_after_discount: 9200
+        grand_total: 9200
+        currency: "THB"
+        delivery_address: "Wonderland"
+      - description: "Detail"
+        sequence: 0
+        sku: 0
+        product_name: "Asus"
+        quantity: 1
+        unit: 2
+        price_per_unit: 10000
+        total_price: 20000
+      - description: "Detail"
+        sequence: 0
+        sku: 0
+        product_name: "Acer"
+        quantity: 1
+        unit: 2
+        price_per_unit: 1000
+        total_price: 2000
+  reqDocDetail:
+    properties:
+          sequence: 
+            type: integer
+          sku:
+            type: integer
+          product_name:
+            type: string
+          quantity:
+            type: integer
+          unit:
+            type: integer
+          price_per_unit: 
+            type: integer
+          total_price:
+            type: integer
+    example:
+      - description: "Detail"
+        sequence: 0
+        sku: 0
+        product_name: "Asus"
+        quantity: 1
+        unit: 2
+        price_per_unit: 10000
+        total_price: 20000
+      - description: "Detail"
+        sequence: 0
+        sku: 0
+        product_name: "Acer"
+        quantity: 1
+        unit: 2
+        price_per_unit: 1000
+        total_price: 2000
+      
+  reqOnboard:
+    properties:
+      login_company_id:
+        type: "integer"
+        example: 1
+  createOK:
+    properties:
+      status: 
+        type: "integer"
+        example: 200
+      message_code:
+        type: "integer"
+        example: "0000"
+      message_description:
+        type: "string"
+        example: "create PO[PO001] success"
+  createInvalid:
+    properties:
+      status: 
+        type: "integer"
+        example: 400
+      message_code:
+        type: "integer"
+        example: "0000"
+      message_description:
+        type: "string"
+        example: "Bad request due to incorrect document status"
+  createNotFound:
+    properties:
+      status: 
+        type: "integer"
+        example: 404
+      message_code:
+        type: "integer"
+        example: "0000"
+      message_description:
+        type: "string"
+        example: "Data not found due to incorrect document type"
+  resDashboard200:
+    type: array
+    items:
+      type: object
+      properties:
+        document_type: 
+          type: integer
+        document_status: 
+          type: integer
+        count_document:
+          type: integer
+        total:
+          type: number
+    example:
+      - document_type: 110
+        document_status: 1
+        count_document: 3
+        total: 145530.13
+      - document_type: 110
+        document_status: 3
+        count_document: 5
+        total: 507450.78
+      - document_type: 120
+        document_status: 1
+        count_document: 4
+        total: 30000.56
+      - document_type: 120
+        document_status: 5
+        count_document: 1
+        total: 96000.56
+      - document_type: 210
+        document_status: 9
+        count_document: 2
+        total: 75000.56
+  documentReq:
+      properties:  
+        document_number: 
+          type: integer
+          example : PO001
+        login_company_id:
+          type: integer
+          example: 1
+        target_company_id:
+          type: integer
+          example: 2
+  cancelSuccess:
+      properties:
+        Status: 
+          type: integer
+          example: 200
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "cancel PO[PO001] success"
+  cancelInvalid:
+      properties:
+        Status: 
+          type: integer
+          example: 400
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "fail to cancel due to incorrect company id"  
+  cancelNotFound:
+      properties:
+        Status: 
+          type: integer
+          example: 404
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "fail to find data due to incorrect document type" 
+  rejectSuccess:
+      properties:
+        Status: 
+          type: integer
+          example: 200
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "reject PO[PO001] success"
+  rejectInvalid:
+      properties:
+        Status: 
+          type: integer
+          example: 400
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "fail to reject due to incorrect company id"  
+  rejectNotFound:
+      properties:
+        Status: 
+          type: integer
+          example: 404
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "fail to find data due to incorrect document type"
+  submitSuccess:
+      properties:
+        Status: 
+          type: integer
+          example: 200
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "submit PO[PO001] success"
+  submitInvalid:
+      properties:
+        Status: 
+          type: integer
+          example: 400
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "fail to submit due to incorrect company id"  
+  submitNotFound:
+      properties:
+        Status: 
+          type: integer
+          example: 404
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "fail to find data due to incorrect document type"     
+  acceptSuccess:
+      properties:
+        Status: 
+          type: integer
+          example: 200
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "accept PO[PO001] success"
+  acceptInvalid:
+      properties:
+        Status: 
+          type: integer
+          example: 400
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "fail to accept due to incorrect company id"  
+  acceptNotFound:
+      properties:
+        Status: 
+          type: integer
+          example: 404
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "fail to find data due to incorrect document type"    
+  editSuccess:
+      properties:
+        Status: 
+          type: integer
+          example: 200
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "editPO[PO001] success"
+  editInvalid:
+      properties:
+        Status: 
+          type: integer
+          example: 400
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "fail to edit due to incorrect company id"  
+  editNotFound:
+      properties:
+        Status: 
+          type: integer
+          example: 404
+        message_code: 
+          type: string
+          example: "0000"
+        message_description:
+          type: string
+          example: "fail to find data due to incorrect document type"   
+  getDocID: 
+   properties:
+    document_number:
+      type: integer
+      example: PO001
+    seller_company_id:
+      type: integer
+      example: 1
+    buyer_company_id:
+      type: integer
+      example: 2
+    document_status:
+      type: integer
+      example: 1
+  getDocSuccess:
+    type: array
+    items:
+      type: object
+      properties:
+          document_number: 
+            type: integer
+          create_date:
+            type: string
+          expire_date:
+            type: string
+          buyer_company_id:
+            type: integer
+          seller_company_id:
+            type: integer
+          document_type: 
+            type: integer
+          document_status:
+            type: integer
+          record_status:
+            type: integer
+          note:
+            type: string
+          reason_cancel:
+            type: string
+          reason_reject:
+            type: string
+          update_by_id:
+            type: integer
+          count_edit_version:
+            type: integer
+          sequence: 
+            type: integer
+          sku:
+            type: integer
+          product_name:
+            type: string
+          quantity:
+            type: integer
+          unit:
+            type: integer
+          price_per_unit: 
+            type: integer
+          total_price:
+            type: integer
+          desciption:
+            type: string
+          net:
+            type: integer
+          vat_percent: 
+            type: integer
+          vat_value:
+            type: integer
+          discount:
+            type: integer
+          total_after_discount:
+            type: integer
+          grand_total: 
+            type: integer
+          currency:
+            type: string
+          delivery_address:
+            type: string
+    example:
+      - description: "Header"
+        document_number: PO001
+        create_date: "2020-01-11 00:00:00"
+        expite_date: "2022-01-11 00:00:00"
+        buyer_compay_id: 1
+        Seller_compay_id: 2
+        document_type: 110
+        document_status: 1
+        recode_status: 1
+        net: 10000
+        vat_percent: 700
+        vat_value: 700
+        discount: 100
+        total_after_discount: 9200
+        grand_total: 9200
+        currency: "THB"
+        delivery_address: "Wonderland"
+      - description: "Detail"
+        sequence: 0
+        sku: 0
+        product_name: "Asus"
+        quantity: 1
+        unit: 2
+        price_per_unit: 10000
+        total_price: 20000
+      - description: "Detail"
+        sequence: 0
+        sku: 0
+        product_name: "Acer"
+        quantity: 1
+        unit: 2
+        price_per_unit: 1000
+        total_price: 2000
+

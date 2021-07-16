@@ -1,0 +1,1 @@
+/home/Go/src/ swag init

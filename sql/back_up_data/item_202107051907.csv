@@ -1,0 +1,25 @@
+"id","market_id","item_name","price_per_unit","item_type","permit_currency","update_date","plant_description"
+1,0,gamu gamu seed,0,seed,0,,ผลไม้ในตำนานที่ว่ากันว่าทานเข้าไปแล้วจะ.......
+2,1,forest silk seed,50,seed,1,,S T O N K
+3,1,horny seed,100,seed,1,,"no horny ""BONK BONK BONK"""
+4,1,jack o'lantern RGB seed,50,seed,1,,ผลไม้หน้าตาประหลาด ที่จะเปล่งประกายในค่ำคืนที่มืดมิด 
+5,1,mandragora seed,100,seed,1,,ผลไม้ลึกลับที่จะส่งเสียงร้องน่ารำคาญเวลาถูกรบกวนเวลานอน
+6,1,apricot seed,40,seed,1,,ผลไม้หลากสีแห่งเมือง ComSci ที่มีรสชาติที่หลากหลายซุกซ่อนอยู่
+7,2,lottery,75,lottery,2,,ไอเทมที่เอาไว้วัดว่าดวงคุณแข็งแกร่งแค่ไหน
+8,3,gamu gamu fruit,0,fruit,1,,เก็บไว้ให้ดีๆล่ะ
+9,3,forest silk fruit 1,100,fruit,1,,หลายคนเปรียบมันดั่งลูกนกที่ยังไม่พร้อมออกจากรัง
+10,3,forest silk fruit 2,150,fruit,1,,ใจเย็นๆอีกซักนิด....
+11,3,forest silk fruit 3,200,fruit,1,,รวย!!!
+12,3,jack o'lantern RGB fruit,100,fruit,1,,Zzz
+18,3,golden time jack o'lantern RGB fruit,200,fruit,1,,RGB mode activate
+19,3,mandragora fruit,150,fruit,1,,มีสรรพคุณมากมาย พ่อค้ามักรับซื้อคู่กับผลไม้ชนิดอืนๆเพอนำไปใชผสมทำยาตอไป
+20,3,apricot white fruit,40,fruit,1,,เค็ม!!! ผลไม้ลูกนี้นี่มันเค็มจริงๆ
+21,3,apricot blue fruit,50,fruit,1,,รสชาติค่อนข้างบาดปาก จึงไม่ค่อยเป็นที่นิยม
+22,3,apricot green fruit,60,fruit,1,,ว่ากันว่าเวลาจะกินอย่าให้โดนโคนลิ้น
+23,3,apricot red fruit,70,fruit,1,,เวลาจะกินอย่าลืมเตรียมน้ำเย็นๆไว้เยอะๆล่ะ
+24,3,apricot orange fruit,80,fruit,1,,มีรสซาบซ่าน ช่วยให้รู้สึกหายง่วงได้
+25,3,apricot pink fruit,90,fruit,1,,รสชาติหอมหวานของมันเกินที่ใครๆจะต้านทานไหว
+26,3,apricot black fruit,100,fruit,1,,จุดบรรจบของรสชาติที่ลงตัวที่ใครๆก็อยากลิ้มลอง
+27,3,apricot rainbow fruit,500,fruit,1,,ผลไม้หายากที่มีโอกาสเกิดเพิ่งแค่ 10 ลูกต่อปี ว่ากันว่ารสชาติของมันสุดลึกล้ำเหนือคำบรรยาย
+28,3,horny fruit,100,fruit,1,,We said NO HORNY!!!
+29,0,water,0,item,0,,น้ำอัมฤตสุดมหัศจรรย์เมื่อนำไปรดพืช ผลไม้แล้วน้ำนี้จะสั่งให้พืช ผลไม้ต้นนั้นเติบโตซะ!!!
